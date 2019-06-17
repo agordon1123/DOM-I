@@ -1,6 +1,5 @@
 // NAVIGATION
 const navSelection = document.querySelectorAll('nav a');
-console.log('navSelection', navSelection);
 navSelection[0].textContent = 'Services';
 navSelection[1].textContent = 'Product';
 navSelection[2].textContent = 'Vision';
@@ -8,12 +7,30 @@ navSelection[3].textContent = 'Features';
 navSelection[4].textContent = 'About';
 navSelection[5].textContent = 'Contact';
 
+navSelection[0].style.color = 'green';
+navSelection[1].style.color = 'green';
+navSelection[2].style.color = 'green';
+navSelection[3].style.color = 'green';
+navSelection[4].style.color = 'green';
+navSelection[5].style.color = 'green';
+
+const newA = document.createElement('a');
+newA.textContent = 'File Complaint';
+const newNavA = document.querySelector('nav');
+newNavA.append(newA);
+newA.style.color = 'green';
+
+const newNewA = document.createElement('a');
+newNewA.textContent = 'Donate';
+const newNewNavA = document.querySelector('nav');
+newNewNavA.prepend(newNewA);
+newNewA.style.color = 'green';
+
 const logoImg = document.querySelector('#logo-img');
 logoImg.src = "img/logo.png";
 
 // TOP CONTENT
 var topContent = document.querySelector('.cta-text h1');
-console.log(topContent);
 topContent.innerHTML = 'DOM<br>Is<br>Awesome';
 
 // TOP IMAGE
@@ -44,7 +61,17 @@ const midImg = document.querySelector('#middle-img');
 midImg.src = "img/mid-page-accent.jpg";
 
 // CONTACT
+const contactHeading = document.querySelector('.contact h4');
+contactHeading.textContent = 'Contact';
 
+const contactPar = document.querySelectorAll('.contact p');
+contactPar[0].innerHTML = '123 Way 456 Street<br>Somewhere, USA';
+contactPar[1].textContent = '1 (888) 888-8888';
+contactPar[2].textContent = 'sales@greatidea.io';
+
+// FOOTER
+const footerText = document.querySelector('footer p');
+footerText.textContent = 'Copyright Great Idea! 2018';
 
 // const siteContent = {
 //   {
