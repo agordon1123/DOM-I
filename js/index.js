@@ -1,4 +1,3 @@
-// const siteContent = {}
 // NAVIGATION
 const navSelection = document.querySelectorAll('nav a');
 console.log('navSelection', navSelection);
@@ -15,10 +14,7 @@ logoImg.src = "img/logo.png";
 // TOP CONTENT
 var topContent = document.querySelector('.cta-text h1');
 console.log(topContent);
-lineBreak = document.createElement('br');
-topContent.textContent = 'DOM Is Awesome!';
-topContent.appendChild(lineBreak);
-console.log(lineBreak);
+topContent.innerHTML = 'DOM<br>Is<br>Awesome';
 
 // TOP IMAGE
 const topImg = document.querySelector('.cta img');
@@ -29,7 +25,28 @@ const getStartedBtn = document.querySelector('.cta button');
 getStartedBtn.textContent = 'Get Started';
 
 // MAIN CONTENT
+const mainContHeadings = document.querySelectorAll('.text-content h4');
+mainContHeadings[0].textContent = 'Features';
+mainContHeadings[1].textContent = 'About';
+mainContHeadings[2].textContent = 'Services';
+mainContHeadings[3].textContent = 'Product';
+mainContHeadings[4].textContent = 'Vision';
 
+
+const textContent = document.querySelectorAll('.text-content p');
+textContent[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+textContent[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+textContent[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+textContent[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+textContent[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const midImg = document.querySelector('#middle-img');
+midImg.src = "img/mid-page-accent.jpg";
+
+// CONTACT
+
+
+// const siteContent = {
 //   {
 //     "nav-item-1": "Services",
 //     "nav-item-2": "Product",
