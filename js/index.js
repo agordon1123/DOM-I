@@ -41,20 +41,6 @@ const siteContent = {
 // NAVIGATION
 const navLinks = document.querySelectorAll('nav a');
 
-// navSelection[0].textContent = 'Services';
-// navSelection[1].textContent = 'Product';
-// navSelection[2].textContent = 'Vision';
-// navSelection[3].textContent = 'Features';
-// navSelection[4].textContent = 'About';
-// navSelection[5].textContent = 'Contact';
-
-// navSelection[0].style.color = 'green';
-// navSelection[1].style.color = 'green';
-// navSelection[2].style.color = 'green';
-// navSelection[3].style.color = 'green';
-// navSelection[4].style.color = 'green';
-// navSelection[5].style.color = 'green';
-
 navLinks.forEach((a, i) => {
   a.style.color = 'green';
   a.textContent = siteContent.nav[`nav-item-${i+1}`]
@@ -62,20 +48,21 @@ navLinks.forEach((a, i) => {
 
 const navHelp = document.createElement('a');
 navHelp.textContent = 'Help';
-const newNavA = document.querySelector('nav');
-newNavA.append(navHelp);
+const appendNavA = document.querySelector('nav');
+appendNavA.append(navHelp);
 navHelp.style.color = 'green';
 navHelp.href = '#';
 
 const navDonate = document.createElement('a');
 navDonate.textContent = 'Donate';
-const newNewNavA = document.querySelector('nav');
-newNewNavA.prepend(navDonate);
+const prependNavA = document.querySelector('nav');
+prependNavA.prepend(navDonate);
 navDonate.style.color = 'green';
 navDonate.href = '#';
 
+// HEADER IMAGE
 const logoImg = document.querySelector('#logo-img');
-logoImg.src = "img/logo.png";
+logoImg.setAttribute('src', 'img/logo.png');
 
 // TOP CONTENT
 var topContent = document.querySelector('.cta-text h1');
@@ -91,6 +78,7 @@ getStartedBtn.textContent = 'Get Started';
 
 // MAIN CONTENT
 const mainHeadings = document.querySelectorAll('.main-content h4');
+console.log(mainHeadings)
 
 mainHeadings[0].textContent = siteContent['main-content']['features-h4'];
 mainHeadings[1].textContent = siteContent['main-content']['about-h4'];
@@ -101,7 +89,8 @@ mainHeadings[4].textContent = siteContent['main-content']['vision-h4'];
 // TRYING TO GRAB CONTENT VIA A METHOD
 
 // mainHeadings.forEach((el, i) => {
-//   el.textContent = siteContent.main-[`features-${i+1}`]
+//   el.textContent = siteContent['main-content'][`${i++}-h4`];
+//   console.log(el)
 // });
 
 
@@ -124,7 +113,7 @@ featuresContent[4].textContent = siteContent['main-content']['vision-content'];
 // });
 
 const midImg = document.querySelector('#middle-img');
-midImg.src = "img/mid-page-accent.jpg";
+midImg.setAttribute('src', 'img/mid-page-accent.jpg');
 
 // CONTACT
 const contactHeading = document.querySelector('.contact h4');
